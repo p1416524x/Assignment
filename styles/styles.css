@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  background-image: url('Work.jpg');
+}
+
+h1 {
+  font-size: 1.25em;
+  font-colour: white;
+  text-align: center;
+  background-image: url('Himage.jpg');
+  color: #2222;
+  margin: 0;
+  padding: 1em;
+}
+h2 {
+  margin-top: 0;
+}
+footer a:link,
+footer a:visited {
+  color: #444;
+}
+footer a:hover {
+  color: #888;
+  
+}
+
+input,
+section {
+  display: none;
+  padding: 1em;
+  clear: both;
+}
+section footer {
+  position: absolute;
+  bottom: 0;
+  background: #ccc;
+  width: 100%;
+  margin-left: -1em;
+}
+section footer p {
+  padding: 0 1em;
+  line-height: 1.5em;
+  text-align: center;
+}
+/*
+  displays and styles 'label' tags (for radio button 'input' tags)
+*/
+label {
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  color: #225;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background: #eee;
+  line-height: 3em;
+  border-right: 1px solid #444;
+}
+/* hides the tab text but leaves the icons visible: */
+label span {
+  display: none;
+}
+label:last-child {
+  border-right: none;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block;
+}
+
+[id^="tab"]:checked + label {
+  background: #ccc;
+  color: #222;
+}
+[id^="tab"]:checked + label .fa {
+  color: red
+}
+
+.tab-content {
+  background: #fff;
+}
+.fa {
+  margin-right: 10px;
+}
+
+
+table, th, td  {
+  border-collapse: collapse;
+  border: 1px solid black;
+} 
+
+ tr:nth-child(odd){
+  background-color: #9fa3a8;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+li {
+  padding: 4px;
+  
+}
+
+dt {
+  padding-left: 10px;
+}
+
+dd { 
+    padding: 4px;
+} 
+
+
+.tab_container section * {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+
+  0% { 
+  	opacity: 0;
+  }
+
+  100% { 
+  	opacity: 1;
+  }
+  
+}
+
+
+
+
+
+/* --------- Basic responsive breakpoint --------- */
+
+@media only screen and (min-width: 700px) {
+  h1 {
+    font-size: 2em;
+  }
+  /* shows the tab text and the icons: */
+  label span {
+    display: inline;
+  }
+}

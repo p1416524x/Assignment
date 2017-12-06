@@ -1,0 +1,49 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden
+}
+
+body{
+  margin: 1em;
+  padding: 0;
+  font-size: 15;
+  background-image: url('s2000.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  
+}
+
+nav {
+  margin: 0;
+  
+  overflow: hidden;
+  background-color: #222;
+  
+  
+}
+  
+nav ul{
+  margin: 0 auto;
+  padding: 0;
+  width: 980px;
+  max-width: 100%;
+  text-align:center;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li a {
+  color: #aaa;
+  display: block;
+  line-height: 4em;
+  padding: 0.5em 0.5em;
+  text-decoration: none;}
+
+nav ul li a:hover {
+  color: #FF69B4
+}
