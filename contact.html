@@ -13,7 +13,7 @@
 
 <body>
 
-
+<div class="content">
 
   <header>
 
@@ -32,63 +32,76 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="features.html">Features</a></li>
     <li><a href="videos.html">Videos</a></li>
-    <li><a href="readers.html">Readers Rides</a></li>
+    <li><a href="readers.html">Events</a></li>
 	<li><a href="contact.html">Contact Us</a></li>
   </ul>
 
   </nav>
 
-  <section class="outerbody ">
 
 
-    <section class="innerbody">
-
-    <div class = "form-container">
-       <form id = "contact" method = "post">
-         <h1> Contact Us </h1>
-         <h2> Send us your story for a chance for a feature! </h2>
-
-       </form>
- 
-       <div>
-       <label for='name'>Name<span class='required'>(required)</span></label>
-       <input type='text' name='name' placeholder='your name here' required />
+  <div class="contactbg"></div>
+  <div class="contact_wrapper">
+  <div class="contact_container">
+  <div class="top _container">
+    <h2>Get Featured On Our Page!</h2>
+    <h3>Send us some information about yourself and your car. We'll get in touch with you as soon as possible!</h3>
+  </div>
+  <form>
+    <div class="row clearfix">
+      <div class="col_half">
+        <label>Name</label>
+        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+          <input type="text" name="name" placeholder="Joe Bloggs" required />
+    </div>
+    </div>
+    <div class="col_half">
+        <label>Car</label>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+            <input type="text" name="car" placeholder="Nissan Skyline '98 " />
+          </div>
+     </div>
+     </div>
+     <div class="row clearfix">
+     <div class="col_half">
+        <label>Email</label>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email" name="email" placeholder="joebloggs@gmail.com" required />
+     </div>
+     </div>
+     <div class="col_half">
+        <label>Phone</label>
+        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+          <input type="tel" name="phone" placeholder="Mobile/Telephone" pattern="[0-9]{11}" />
+     </div>
+     </div>
+     </div>
+      <div class="row clearfix">
+        <div>
+          <label>Spec List</label>
+          <div class="textarea_field"> <span><i aria-hidden="true" class="fa fa-comment"></i></span>
+            <textarea cols="45" rows="4" name="comments"></textarea>
+     </div>
+     </div>
+     </div>
+      <input class="button" type="submit" value="Submit" />
+    </form>
    </div>
+ </div>
+ </div>
+  <footer class="footer">
 
-   <div>
-       <label for='tel'>Tel</label>
-       <input type='tel' name='tel' placeholder='your telephone here' />
-   </div>
+    <button onclick = "topFunction()" id="topButton" title="Top"> Top </button>
 
-   <div>
-       <label for='email'>Email <span class='required'>(required)</span></label>
-       <input type='email' name='email' placeholder='you@yourdomain.com' required />
-   </div>
+      <p>
+        <div class = "copyright"> Copyright Zak Shergill 2017
+      </div>
 
-   <div>
-       <label for='url'>Website</label>
-       <input type='url' name='website' placeholder='http://' />
-   </div>
+     </p>
 
-   <div>
-       <label for='message'>Message <span class='required'>(required)</span></label>
-       <textarea name='message' required></textarea>
-   </div>
-
-   <div>
-       <button type='submit'>Send Message</button>
-   </div>
-
-
-
-
-
-
-
-</footer>
-</body>
-<script src="js/script.js"></script>
-
+   </footer>
+  </body>
+  <script src="js/script.js"></script>
 
 
 </html>
