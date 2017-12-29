@@ -26,7 +26,7 @@ body{
   display: flex;
   flex-direction: column;
   height: 100vh;
-
+  background-color: black;
 
 }
 
@@ -36,7 +36,7 @@ body{
 
 .slides img {
 
-
+margin: 0 auto;
   width: 100%;
 
 }
@@ -51,14 +51,19 @@ body{
 }
 
 .threelinks {
-  width:33.33%;
+  width:33.3%;
   padding: 0;
   margin: 0;
   padding-bottom: 20px;
   float:left;
   text-align: center;
   color: #ffffff;
-  background-color: #000000 ;
+  background-color: black ;
+}
+.threelinks img {
+
+  border-radius: 150px;
+
 }
 
 .card-container{
@@ -67,6 +72,16 @@ body{
   position: relative;
   height: 150px;
   width: 100%;
+
+}
+
+.card{
+  height: 170px;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+
 }
 
 .feature1 {
@@ -174,10 +189,19 @@ background-color: black;
     padding-bottom: 50px;
 }
 
-button {
+.button {
+    position: relative;
+    display: inline-block;
+    width: 5%;
     background-color: white;
     border-radius: 50%;
     margin-top: 8px;
+    background-color: #aaa;
+}
+.button a {
+  text-decoration: none;
+  color: black;
+
 }
 footer {
     width: 100%;
@@ -188,8 +212,7 @@ footer {
     bottom: 0;
     margin-top: 100px;
 
-
-}
+  }
 
 .footer {
   flex-shrink: 0;
@@ -219,6 +242,34 @@ topButton:hover {
 
 }
 
+h1 {
+  color: #ff69b4;
+  position:relative;
+  text-align:center;
+  font-style: oblique;
+}
+#map {
+position: relative;
+height: 500px;
+width: 100%;
+left: 0px;
+top: 100%;
+clear: both;
+}
+ .body{
+   display: block;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 90%
+}
+
+.body p {
+  color: #aaa;
+}
+
+#intro{
+position: absolute;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -380,6 +431,7 @@ topButton:hover {
 .contact_wrapper label {
 	display:block;
 	margin:0 0 5px;
+  color: #ff69b4;
 }
 .contact_wrapper .input_field, .contact_wrapper .textarea_field {
 	position:relative;
@@ -388,14 +440,14 @@ topButton:hover {
 	position:absolute;
 	left:0;
 	top:0;
-	color:#333;
+	color:#aaa;
 	height:100%;
 	border-right:1px solid #aaa;
 	text-align:center;
 	width:30px;
 }
 .contact_wrapper .textarea_field > span {
-	border-bottom:1px solid #ccc;
+	border-bottom:1px solid #aaa;
 	max-height:35px;
 }
 .contact_wrapper .input_field > span > i, .contact_wrapper .textarea_field > span > i {
@@ -414,6 +466,7 @@ topButton:hover {
 }
 .contact_wrapper textarea {
 	height:8em;
+
 }
 .contact_wrapper input[type="text"]:focus, .contact_wrapper input[type="email"]:focus, .contact_wrapper input[type="tel"]:focus, textarea:focus {
 	-webkit-box-shadow:0 0 2px 1px rgba(255, 169, 0, 0.5);
