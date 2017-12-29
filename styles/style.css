@@ -24,7 +24,7 @@ header {
 
 body{
   padding: 0;
-  font-size: 15;
+  font-size: 15px;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -114,10 +114,6 @@ margin: 0 auto;
   .feature3:hover{
     -webkit-filter: brightness(100%);
 }
-
-
-
-
 nav {
   margin: 0 auto;
   background-color: black;
@@ -241,6 +237,26 @@ li{
 
 	}
 
+
+  .sitemap ul{
+
+  }
+
+  .sitemap ul li {
+    display: inline-block;
+    list-style-type: none;
+
+  }
+
+  .sitemap ul li a {
+    color: #ff69b4;
+    line-height: 2em;
+    padding: 1em 3.5em;
+    text-decoration: none;
+    background-color: black;
+
+     }
+
 video {
 position: relative; right: 0; bottom: 0;
 width: auto; height: auto;
@@ -297,8 +313,6 @@ topButton:hover {
     background-color: #ff69b4;
 }
 
-
-}
 
 @keyframes sliding {
 0% { left: 0%; }
@@ -384,7 +398,7 @@ position: absolute;
   color: #aaa;
   font-size: 18px;
   position: absolute;
-  bottom: 0px 28px;
+  bottom: -3em;
   width: 100%;
   text-align: center;
   z-index: 10;
