@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   height: 100%;
   font-family: calibri;
+  max-height: 100%;
 
 }
 
@@ -15,8 +16,9 @@ header {
     height: 250px;
     background-image: url('../imgs/logo.jpg');
 	  background-repeat: no-repeat;
-	  background-size: cover;
+	  background-size: contain;
 	  background-position: center;
+
 
 }
 
@@ -51,10 +53,9 @@ margin: 0 auto;
 }
 
 .threelinks {
+  position: relative;
   width:33.3%;
-  padding: 0;
-  margin: 0;
-  padding-bottom: 20px;
+  margin-top: 150px;
   float:left;
   text-align: center;
   color: #ffffff;
@@ -66,23 +67,7 @@ margin: 0 auto;
 
 }
 
-.card-container{
-  cursor: pointer;
-  perspective: 600;
-  position: relative;
-  height: 150px;
-  width: 100%;
 
-}
-
-.card{
-  height: 170px;
-  width: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-  transition: all 1s ease-in-out;
-
-}
 
 .feature1 {
   -webkit-filter: brightness(30%);
@@ -135,7 +120,6 @@ margin: 0 auto;
 
 nav {
   margin: 0 auto;
-  overflow: hidden;
   background-color: black;
   width: 100%;
   height:40px;
@@ -164,28 +148,89 @@ nav ul li a {
   line-height: 2em;
   padding: 0.5em 3.5em;
   text-decoration: none;
-
+  background-color: black;
    }
 
 nav ul li a:hover {
   color: #FF69B4
 }
 
+
+#responsive_nav {
+	display: none;
+	cursor: pointer;
+}
+
+#tog {
+	display: none;
+}
+
+
+@media (min-width: 0px) and (max-width: 768px) {
+
+  nav {
+    margin-bottom: 220px;
+
+ }
+
+	nav ul li {
+		display: block;
+	}
+
+  nav ul li a {
+    color: #ff69b4;
+    background-color: black;
+
+  }
+
+	#nav {
+		display: none;
+	}
+	#responsive_nav {
+		color: white;
+		font-weight: bold;
+		display: block;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 20px;
+		padding: 20px;
+	}
+
+	input[type=checkbox]:not(:checked)~ul{
+		display: none;
+	}
+
+	input[type=checkbox]:checked~ul{
+		display: block;
+}
+
+.feature1 img{
+
+	width: 100%
+}
+
+.innerbody img {
+  max-width: 100%;
+}
+
+
+	}
+
 video {
 position: relative; right: 0; bottom: 0;
-max-width: 100%; max-height: 100%;
-min-width: 100%; min-height: 100%;
 width: auto; height: auto;
-background-size: cover;
 background-color: black;
+background-size: cover;
+min-width: 100%; min-height: 100%;
+max-width: 100%; max-height: 100%;
 }
 
 .innerbody {
     margin: 0 auto;
     max-width: 100%;
-    width: 100%;
     background: black;
     padding-top: 10px;
+    width: 100%;
     padding-bottom: 50px;
 }
 
@@ -203,22 +248,23 @@ background-color: black;
   color: black;
 
 }
-footer {
-    width: 100%;
-    color: #aaa;
-    position: relative;
-    text-align: center;
-    background: black;
-    bottom: 0;
-    margin-top: 100px;
-
-  }
 
 .footer {
   flex-shrink: 0;
   padding: 0px;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #efefef;
+  text-align: center;
+  background: black;
 
 }
+
+
+
+
 
 topButton {
     position: fixed;
@@ -232,21 +278,55 @@ topButton:hover {
 
 
 
-*@media screen and (max-width: 700px) {
-    .outerbody{
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-bottom: 0px;
 
-    }
 
 }
+
+@keyframes sliding {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+div#slider {
+  overflow: hidden;
+}
+
+div#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+div#slider figure {
+  margin: 0;
+  width: 500%;
+  position: relative;
+  animation: 10s sliding infinite;
+  font-size: 0;
+  left: 0;
+  text-align: left;
+}
+
 
 h1 {
   color: #ff69b4;
   position:relative;
   text-align:center;
   font-style: oblique;
+}
+
+h2 {
+  color: #aaa;
+  text-align: center;
+  text-decoration: overline underline;
+  text-decoration-color: #FF69B4;
+
 }
 #map {
 position: relative;
@@ -260,12 +340,13 @@ clear: both;
    display: block;
   margin: 0 auto;
   max-width: 1000px;
-  width: 90%
+  width: 90%;
 }
 
 .body p {
   color: #aaa;
 }
+
 
 #intro{
 position: absolute;
@@ -274,38 +355,11 @@ position: absolute;
 /* Slideshow container */
 .slideshow-container {
   max-width: 100%;
-  height: 610px;
+  height: 100%;
   position: relative;
   margin: auto;
 }
 
-
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
 
 /* Caption text */
 .text {
@@ -315,28 +369,21 @@ position: absolute;
   bottom: 0px 28px;
   width: 100%;
   text-align: center;
+  z-index: 10;
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+  color: #ff69b4;
+  text-decoration: overline underline;
+  font-weight: bold;
   position: absolute;
+  padding: 8px 12px;
+  font-size: 12px;
   top: 0;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 16px;
-  width: 16px;
-  margin: 0 20px;
-  background-color: grey;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+
 
 .active, .dot:hover {
   background-color: #FF69B4;
@@ -362,58 +409,59 @@ position: absolute;
 }
 
 .icons {
+  width: 33.3%;
   display: inline-block;
   margin: 0;
-  width: 33.3%;
   text-align: center;
 }
 
 .contactbg {
 	background-image:url("../imgs/s2000.jpg");
+	position:absolute;
 	background-size:cover;
 	background-attachment:fixed;
-	position:absolute;
-	height:100%;
+	height:850px;
 	width:100%;
 
 }
 
 .contact_wrapper {
-	background: black;
 	width:500px;
 	max-width:100%;
   position:relative;
   z-index:1;
   box-sizing:border-box;
-	padding:15px;
-	margin:5% auto 0;
+	padding:15px ;
   box-shadow:0 23px 4px -21px rgba(0, 0, 0, 0.9);
 	-webkit-box-shadow:0 23px 4px -21px rgba(0, 0, 0, 0.9);
 	-moz-box-shadow:0 23px 4px -21px rgba(0, 0, 0, 0.9);
+	background: black;
+	margin:5% auto 0;
+  margin-bottom: 200px;
 
 }
 .contact_container {
 	padding:15px;
-	border-width:3px;
   border-style:  solid dashed;
   border-color: #aaa;
+	border-width:3px;
 }
 .contact_wrapper h2 {
 	font-size:1.5em;
+  color: #FF69B4;
 	line-height:1.5em;
 	margin:0;
-  color: #FF69B4;
 }
 .contact_wrapper .top_container {
 	text-align:center;
+	border-bottom:1px dashed #ccc;
 	margin:-15px -15px 15px;
 	padding:15px 0;
-	border-bottom:1px dashed #ccc;
 }
 .contact_wrapper h3 {
-	font-size:1.1em;
 	font-weight:normal;
 	line-height:1.5em;
+	font-size:1.1em;
 	margin:0;
   color: #aaa;
 }
@@ -429,8 +477,8 @@ position: absolute;
 	float:left;
 }
 .contact_wrapper label {
-	display:block;
 	margin:0 0 5px;
+	display:block;
   color: #ff69b4;
 }
 .contact_wrapper .input_field, .contact_wrapper .textarea_field {
@@ -438,17 +486,17 @@ position: absolute;
 }
 .contact_wrapper .input_field > span, .contact_wrapper .textarea_field > span {
 	position:absolute;
-	left:0;
 	top:0;
 	color:#aaa;
 	height:100%;
+	left:0;
 	border-right:1px solid #aaa;
 	text-align:center;
 	width:30px;
 }
 .contact_wrapper .textarea_field > span {
-	border-bottom:1px solid #aaa;
 	max-height:35px;
+	border-bottom:1px solid #aaa;
 }
 .contact_wrapper .input_field > span > i, .contact_wrapper .textarea_field > span > i {
 	padding-top:12px;
@@ -460,34 +508,34 @@ position: absolute;
 	box-sizing:border-box;
 	outline:none;
 	-webkit-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
 	-moz-transition: all 0.30s ease-in-out;
 	-ms-transition: all 0.30s ease-in-out;
-	transition: all 0.30s ease-in-out;
 }
 .contact_wrapper textarea {
 	height:8em;
 
 }
 .contact_wrapper input[type="text"]:focus, .contact_wrapper input[type="email"]:focus, .contact_wrapper input[type="tel"]:focus, textarea:focus {
-	-webkit-box-shadow:0 0 2px 1px rgba(255, 169, 0, 0.5);
-	-moz-box-shadow:0 0 2px 1px rgba(255, 169, 0, 0.5);
-	box-shadow:0 0 2px 1px rgba(255, 169, 0, 0.5);
 	border:1px solid #f5ba1a;
+	box-shadow:0 0 2px 1px rgba(255, 169, 0, 0.6);
+	-webkit-box-shadow:0 0 2px 1px rgba(255, 169, 0, 0.6);
+	-moz-box-shadow:0 0 2px 1px rgba(255, 169, 0, 0.6);
 }
 .contact_wrapper input[type="submit"] {
 	background: #aaa;
 	height:50px;
-	line-height:50px;
 	width:100%;
+	color:black;
 	border:none;
 	outline:none;
-	cursor:pointer;
-	color:black;
 	font-size:1.2em;
+	cursor:pointer;
+	line-height:50px;
+	-ms-transition: all 0.30s ease-in-out;
 	-webkit-transition: all 0.30s ease-in-out;
 	-moz-transition: all 0.30s ease-in-out;
-	-ms-transition: all 0.30s ease-in-out;
-	transition: all 0.30s ease-in-out;
+	transition: all 0.35s ease-in-out;
 }
 .contact_wrapper input[type="submit"]:hover, .contact_wrapper input[type="submit"]:focus {
 	background: #FF69B4;
